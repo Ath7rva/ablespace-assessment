@@ -2,6 +2,15 @@
 
 Full-stack technical assessment for AbleSpace. The project implements a responsive task-management workspace inspired by the supplied Figma design, backed by a NestJS API and PostgreSQL.
 
+## Live Links
+
+- Web application: https://ablespace-assessment-web.vercel.app
+- API health: https://ablespace-assessment-api.onrender.com/api/health
+- Repository: https://github.com/Ath7rva/ablespace-assessment
+- AbleSpace Take Data review: https://github.com/Ath7rva/ablespace-assessment/blob/main/docs/ablespace-take-data-review.md
+
+The deployed guest flow, seeded board, task creation, and refresh persistence were verified against the production API and Neon database on August 11, 2026.
+
 ## Stack
 
 - Next.js App Router, TypeScript, Tailwind CSS, Lucide, and dnd-kit
