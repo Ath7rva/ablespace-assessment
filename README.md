@@ -48,7 +48,7 @@ All workspace and task endpoints require the guest JWT returned by `POST /api/au
 
 ## Part 2 Product Review
 
-`docs/ablespace-take-data-review.md` is a deliberately empty evidence template. Complete it only after personally inspecting AbleSpace's Caseload > Take Data screen and redacting sensitive information. The assessment should not be submitted while that document is incomplete.
+`docs/ablespace-take-data-review.md` records a direct review of AbleSpace's Caseload > Take Data workflow. Its screenshots come only from the product's demo account; no real-client data, measurements, or notes were created or changed during the review.
 
 ## Figma Fidelity
 
