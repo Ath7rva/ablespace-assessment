@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --page: #f9fafb;
+  --surface: #ffffff;
+  --surface-muted: #f3f4f6;
+  --border: #e5e7eb;
+  --text: #171717;
+  --muted: #6b7280;
+  --subtle: #9ca3af;
+  --accent: #111111;
+  --accent-contrast: #ffffff;
+  --danger: #dc2626;
+  --danger-soft: #fef2f2;
+  --shadow: 0 1px 2px rgba(0, 0, 0, 0.04), 0 8px 24px rgba(0, 0, 0, 0.04);
+}
+
+:root[data-theme='dark'] {
+  --page: #151515;
+  --surface: #1e1e1e;
+  --surface-muted: #272727;
+  --border: #363636;
+  --text: #f5f5f5;
+  --muted: #a3a3a3;
+  --subtle: #737373;
+  --accent: #f5f5f5;
+  --accent-contrast: #171717;
+  --danger: #f87171;
+  --danger-soft: #3b1c1c;
+  --shadow: 0 1px 2px rgba(0, 0, 0, 0.28), 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+:root[data-accent='violet'] { --accent: #5b43cc; --accent-contrast: #ffffff; }
+:root[data-accent='blue'] { --accent: #2563eb; --accent-contrast: #ffffff; }
+:root[data-accent='rose'] { --accent: #e11d48; --accent-contrast: #ffffff; }
+
+* { box-sizing: border-box; }
+html { background: var(--page); }
+body {
+  min-height: 100vh;
+  margin: 0;
+  background: var(--page);
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+}
+button, input, textarea, select { font: inherit; }
+button { cursor: pointer; }
+::selection { background: color-mix(in srgb, var(--accent) 18%, transparent); }
+
+.surface { background: var(--surface); }
+.muted-surface { background: var(--surface-muted); }
+.line { border-color: var(--border); }
+.text-muted { color: var(--muted); }
+.text-subtle { color: var(--subtle); }
+.icon-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  color: var(--muted);
+  background: transparent;
+}
+.icon-button:hover { background: var(--surface-muted); color: var(--text); }
+.control {
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--surface);
+  color: var(--text);
+}
+.control:focus { outline: 2px solid color-mix(in srgb, var(--accent) 36%, transparent); outline-offset: 1px; }
+.scrollbar-thin::-webkit-scrollbar { width: 7px; height: 7px; }
+.scrollbar-thin::-webkit-scrollbar-thumb { background: color-mix(in srgb, var(--muted) 45%, transparent); border-radius: 999px; }
