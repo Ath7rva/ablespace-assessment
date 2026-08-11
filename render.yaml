@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: ablespace-assessment-api
+    runtime: node
+    buildCommand: npm install && npm run prisma:generate --workspace=@ablespace/api && npm run build --workspace=@ablespace/api
+    startCommand: npm run prisma:migrate --workspace=@ablespace/api && npm run start --workspace=@ablespace/api
+    healthCheckPath: /api/health
+    envVars:
+      - key: DATABASE_URL
+        sync: false
+      - key: JWT_SECRET
+        generateValue: true
+      - key: WEB_ORIGIN
+        sync: false
