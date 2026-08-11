@@ -73,7 +73,7 @@ function statusLabel(status: TaskStatus) {
 
 function formatDate(value: string | null) {
   if (!value) return 'No due date';
-  return new Intl.DateTimeFormat('en', { month: 'short', day: '2-digit' }).format(new Date(value));
+  return new Intl.DateTimeFormat('en', { month: 'short', day: '2-digit', timeZone: 'UTC' }).format(new Date(value));
 }
 
 function dueValue(value: string | null) {
